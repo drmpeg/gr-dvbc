@@ -22,9 +22,10 @@ FIND_LIBRARY(
           /usr/local/lib64
           /usr/lib
           /usr/lib64
-)
+          )
+
+include("${CMAKE_CURRENT_LIST_DIR}/dvbcTarget.cmake")
 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(DVBC DEFAULT_MSG DVBC_LIBRARIES DVBC_INCLUDE_DIRS)
 MARK_AS_ADVANCED(DVBC_LIBRARIES DVBC_INCLUDE_DIRS)
-

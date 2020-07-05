@@ -2,7 +2,7 @@
 
 #define DVBC_API
 
-%include "gnuradio.i"			// the common stuff
+%include "gnuradio.i"           // the common stuff
 
 //load generated python docstrings
 %include "dvbc_swig_doc.i"
@@ -12,7 +12,6 @@
 #include "dvbc/symbolmapper_bb.h"
 #include "dvbc/modulator_bc.h"
 %}
-
 
 %include "dvbc/dvbc_config.h"
 %include "dvbc/symbolmapper_bb.h"
