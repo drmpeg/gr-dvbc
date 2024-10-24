@@ -21,8 +21,8 @@
 #ifndef INCLUDED_DVBC_SYMBOLMAPPER_BB_H
 #define INCLUDED_DVBC_SYMBOLMAPPER_BB_H
 
-#include <dvbc/api.h>
-#include <dvbc/dvbc_config.h>
+#include <gnuradio/dvbc/api.h>
+#include <gnuradio/dvbc/dvbc_config.h>
 #include <gnuradio/block.h>
 
 namespace gr {
@@ -38,7 +38,7 @@ namespace gr {
     class DVBC_API symbolmapper_bb : virtual public gr::block
     {
      public:
-      typedef boost::shared_ptr<symbolmapper_bb> sptr;
+      typedef std::shared_ptr<symbolmapper_bb> sptr;
 
       /*!
        * \brief Create a DVB-C symbol mapper.

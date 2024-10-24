@@ -21,8 +21,8 @@
 #ifndef INCLUDED_DVBC_MODULATOR_BC_H
 #define INCLUDED_DVBC_MODULATOR_BC_H
 
-#include <dvbc/api.h>
-#include <dvbc/dvbc_config.h>
+#include <gnuradio/dvbc/api.h>
+#include <gnuradio/dvbc/dvbc_config.h>
 #include <gnuradio/block.h>
 
 namespace gr {
@@ -38,7 +38,7 @@ namespace gr {
     class DVBC_API modulator_bc : virtual public gr::block
     {
      public:
-      typedef boost::shared_ptr<modulator_bc> sptr;
+      typedef std::shared_ptr<modulator_bc> sptr;
 
       /*!
        * \brief Create a DVB-C modulator.

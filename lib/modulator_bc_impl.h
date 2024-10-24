@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DVBC_MODULATOR_BC_IMPL_H
 #define INCLUDED_DVBC_MODULATOR_BC_IMPL_H
 
-#include <dvbc/modulator_bc.h>
+#include <gnuradio/dvbc/modulator_bc.h>
 
 namespace gr {
   namespace dvbc {

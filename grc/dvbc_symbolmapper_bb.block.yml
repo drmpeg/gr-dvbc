@@ -22,7 +22,7 @@ outputs:
     dtype: byte
 
 templates:
-    imports: import dvbc
+    imports: from gnuradio import dvbc
     make: dvbc.symbolmapper_bb(${constellation.val})
 
 file_format: 1

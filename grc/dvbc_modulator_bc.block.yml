@@ -22,7 +22,7 @@ outputs:
     dtype: complex
 
 templates:
-    imports: import dvbc
+    imports: from gnuradio import dvbc
     make: dvbc.modulator_bc(${constellation.val})
 
 file_format: 1

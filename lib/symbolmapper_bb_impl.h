@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DVBC_SYMBOLMAPPER_BB_IMPL_H
 #define INCLUDED_DVBC_SYMBOLMAPPER_BB_IMPL_H
 
-#include <dvbc/symbolmapper_bb.h>
+#include <gnuradio/dvbc/symbolmapper_bb.h>
 
 namespace gr {
   namespace dvbc {
