@@ -9,7 +9,7 @@
 ########################################################################
 # Setup library
 ########################################################################
-include(GrPlatform) #define LIB_SUFFIX
+include(GNUInstallDirs)
 
 list(APPEND dvbc_sources
     modulator_bc_impl.cc
@@ -28,7 +28,7 @@ target_link_libraries(gnuradio-dvbc gnuradio::gnuradio-runtime)
 target_include_directories(
     gnuradio-dvbc
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
-    PUBLIC $<INSTALL_INTERFACE:include>)
+    PUBLIC $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 set_target_properties(gnuradio-dvbc PROPERTIES DEFINE_SYMBOL "gnuradio_dvbc_EXPORTS")
 
 if(APPLE)

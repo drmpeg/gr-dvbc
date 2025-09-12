@@ -31,10 +31,14 @@ if(DEFINED ENV{PYBOMBS_PREFIX})
     )
 endif()
 
+if(POLICY CMP0148)
+    cmake_policy(SET CMP0148 OLD)
+endif()
+
 # Make sure our local CMake Modules path comes first
 list(INSERT CMAKE_MODULE_PATH 0 ${PROJECT_SOURCE_DIR}/cmake/Modules)
 # Find gnuradio to get access to the cmake modules
-find_package(Gnuradio "3.10" REQUIRED)
+find_package(Gnuradio "3.9" REQUIRED)
 
 # Set the version information here
 # cmake-format: off
@@ -64,16 +68,14 @@ include(GrCompilerSettings)
 ########################################################################
 # Install directories
 ########################################################################
-find_package(Gnuradio "3.9" REQUIRED)
 include(GrVersion)
-
-include(GrPlatform) #define LIB_SUFFIX
+include(GNUInstallDirs)
 
 if(NOT CMAKE_MODULES_DIR)
-    set(CMAKE_MODULES_DIR lib${LIB_SUFFIX}/cmake)
+    set(CMAKE_MODULES_DIR ${CMAKE_INSTALL_LIBDIR}/cmake)
 endif(NOT CMAKE_MODULES_DIR)
 
-set(GR_INCLUDE_DIR include/gnuradio/dvbc)
+set(GR_INCLUDE_DIR ${CMAKE_INSTALL_INCLUDEDIR}/gnuradio/dvbc)
 set(GR_CMAKE_DIR ${CMAKE_MODULES_DIR}/gnuradio-dvbc)
 set(GR_PKG_DATA_DIR ${GR_DATA_DIR}/${CMAKE_PROJECT_NAME})
 set(GR_PKG_DOC_DIR ${GR_DOC_DIR}/${CMAKE_PROJECT_NAME})
